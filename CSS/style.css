@@ -37,6 +37,20 @@ body {
 .choice:hover {
     background: hwb(342 82% 0%);
     transform: translateX(20px);
+    animation: colorChange 2s infinite; /* trigger the animation on hover */
+
+}
+@keyframes colorChange{
+    0%{
+        background-color: crimson;
+    }
+    25%, 70%{
+        background-color: blue;
+    }
+
+    50%,100%{
+        background-color: darkmagenta;
+    }
 }
 
 
