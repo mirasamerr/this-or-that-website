@@ -60,6 +60,29 @@ body {
     animation: colorCombo 2s infinite; /* trigger the animation on hover */
     
 }
+
+.choice-food{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.food {
+    background: lab(52.07% 79.58 15.49);
+    padding: 30px 60px;
+    font-size: 32px;
+    border-radius: 12px;
+    text-decoration:solid;
+    color: black;
+    transition: transform 0.4s;
+}
+
+.food:hover{
+    background: lab(83.78% 4.68 -0.01 / 0.816);
+    transform: translateX(20px);
+    animation: party 2s infinite; /* trigger the animation on hover */
+    
+}
 @keyframes colorChange{
     0%{
         background-color: crimson;
@@ -84,6 +107,20 @@ body {
 
     50%,100%{
         background-color: rgb(252, 150, 109);
+    }
+}
+
+@keyframes party{
+    0%{
+        background-color: hwb(101 2% 0%);
+    }
+
+    25%, 70%{
+        background-color: #04f0fc;
+    }
+
+    50%,100%{
+        background-color: #f33636;
     }
 }
 
@@ -115,4 +152,6 @@ body {
 
 p{
     color: black;
+    font-style: italic;
+    font-weight: bold;
 }
