@@ -5,12 +5,10 @@ body {
     padding-top: 60px;
 }
 
-.b1{
+.b1,b2,b3,b4{
     background-color: rgb(237, 249, 249);
 }
-.b2{
-    background-color: rgb(237, 249, 249);
-}
+
 
 .title {
     font-size: 50px;
@@ -24,7 +22,22 @@ body {
     gap: 40px;
 }
 
+.choice-venue{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
 .choice {
+    background: lab(52.07% 79.58 15.49);
+    padding: 30px 60px;
+    font-size: 32px;
+    border-radius: 12px;
+    text-decoration:solid;
+    color: black;
+    transition: transform 0.4s;
+}
+.venuechoice{
     background: lab(52.07% 79.58 15.49);
     padding: 30px 60px;
     font-size: 32px;
@@ -38,7 +51,14 @@ body {
     background: hwb(342 82% 0%);
     transform: translateX(20px);
     animation: colorChange 2s infinite; /* trigger the animation on hover */
+    
+}
 
+.venuechoice:hover{
+    background: lab(83.78% 4.68 -0.01 / 0.816);
+    transform: translateX(20px);
+    animation: colorCombo 2s infinite; /* trigger the animation on hover */
+    
 }
 @keyframes colorChange{
     0%{
@@ -53,11 +73,33 @@ body {
     }
 }
 
+@keyframes colorCombo{
+    0%{
+    background-color: hsl(45, 100%, 51%);
+    }
+
+    25%, 70%{
+        background-color: rgb(226, 14, 14);
+    }
+
+    50%,100%{
+        background-color: rgb(252, 150, 109);
+    }
+}
+
+
+@keyframes spinImage {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
 .Images {
-    transform: rotate(360deg);
-    transition: transform 2s linear;
+    width: 450px;           /* sets the width to 150px */
+    height: auto;           /* keeps aspect ratio */
+    border-radius: 8px;     /* optional rounded corners */
+    animation: spinImage 2s linear; /* keeps spinning forever */
 }
+
 
 .back {
     display: inline-block;
@@ -69,4 +111,8 @@ body {
 
 .back:hover {
     text-decoration: underline;
+}
+
+p{
+    color: black;
 }
