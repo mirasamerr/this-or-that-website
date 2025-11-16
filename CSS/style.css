@@ -1,13 +1,21 @@
 body {
-    background: #f8f8f8;
+    background: hsl(0, 0%, 100%);
     font-family: Arial, sans-serif;
     text-align: center;
     padding-top: 60px;
 }
 
+.b1{
+    background-color: rgb(237, 249, 249);
+}
+.b2{
+    background-color: rgb(237, 249, 249);
+}
+
 .title {
     font-size: 50px;
     margin-bottom: 50px;
+    color: rgb(7, 5, 5);
 }
 
 .choice-container {
@@ -17,7 +25,7 @@ body {
 }
 
 .choice {
-    background: hwb(248 64% 6%);
+    background: lab(52.07% 79.58 15.49);
     padding: 30px 60px;
     font-size: 32px;
     border-radius: 12px;
@@ -27,8 +35,14 @@ body {
 }
 
 .choice:hover {
-    background: hsl(205, 89%, 71%);
+    background: hwb(342 82% 0%);
     transform: translateX(20px);
+}
+
+
+.Images {
+    transform: rotate(360deg);
+    transition: transform 2s linear;
 }
 
 .back {
